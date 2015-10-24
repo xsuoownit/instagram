@@ -23,7 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"Instagram"];
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Chalkduster" size:21]}];
+    UIColor *navigationBarBGColor = [UIColor colorWithRed:60/255.0f green:84/255.0f blue:189/255.0f alpha:1.0f];
+    self.navigationController.navigationBar.barTintColor = navigationBarBGColor;
     self.feedTableView.dataSource = self;
     self.feedTableView.delegate = self;
     
